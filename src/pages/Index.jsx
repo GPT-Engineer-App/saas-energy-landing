@@ -1,4 +1,5 @@
-import { Box, Button, Flex, Heading, Icon, Image, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Icon, Image, Stack, Text, useColorModeValue, useColorMode, IconButton } from "@chakra-ui/react";
+import { FaMoon, FaSun } from "react-icons/fa";
 import { FaBolt, FaChartLine, FaCloud, FaRocket } from "react-icons/fa";
 
 const Feature = ({ title, text, icon }) => {
@@ -14,8 +15,12 @@ const Feature = ({ title, text, icon }) => {
 };
 
 const Index = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Box px={4} py={20} mx="auto">
+      <Flex justify="flex-end" mb={4}>
+        <IconButton icon={colorMode === "light" ? <FaMoon /> : <FaSun />} isRound={true} size="md" alignSelf="flex-start" onClick={toggleColorMode} aria-label={`Switch to ${colorMode === "light" ? "dark" : "light"} mode`} />
+      </Flex>
       <Flex align={"center"} w={"full"} justifyContent={"center"}>
         <Stack spacing={6} w={"full"} maxW={"lg"}>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
