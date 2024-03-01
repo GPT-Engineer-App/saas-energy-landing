@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Heading, Icon, Image, Stack, Text, useColorModeValue, useColorMode, IconButton } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { FaBolt, FaChartLine, FaCloud, FaRocket } from "react-icons/fa";
+import EnergyHeatmap from "./EnergyHeatmap.jsx";
 
 const Feature = ({ title, text, icon }) => {
   return (
@@ -84,6 +85,7 @@ const Index = () => {
           </Box>
         </Flex>
       </Box>
+      <EnergyHeatmap />
     </Box>
   );
 };
