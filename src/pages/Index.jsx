@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading, Icon, Image, Stack, Text, useColorModeValue
 import { FaMoon, FaSun } from "react-icons/fa";
 import { FaBolt, FaChartLine, FaCloud, FaRocket } from "react-icons/fa";
 import EnergyHeatmap from "./EnergyHeatmap.jsx";
+import DailyEnergyUsage from "./DailyEnergyUsage.jsx";
 
 const Feature = ({ title, text, icon }) => {
   return (
@@ -86,6 +87,7 @@ const Index = () => {
         </Flex>
       </Box>
       <EnergyHeatmap />
+      <DailyEnergyUsage />
     </Box>
   );
 };
